@@ -13,12 +13,47 @@ GeneticAlgorithm::GeneticAlgorithm(int population_size,
     population.reserve(population_size * 2);
 }
 
+// Generate initial population 
 void GeneticAlgorithm::Initial(int len) {
     _gene_length = len;
     for (int i = 0; i < _population_size; i++) {
         population[i] = new individual::Individual();
         population[i+_population_size] = new individual::Individual();
     }
+}
+
+// parents selection and crossover
+void GeneticAlgorithm::Crossover(CrossoverMethod method, double p_c, int n_tnmt) {
+    switch(method){
+      case two_pt:
+        TwoPtCrossover(p_c, n_tnmt);
+        break;
+      case uniform:
+        UniformCrossover(p_c, n_tnmt);
+        break;
+    }
+}
+
+//population mutation
+void GeneticAlgorithm::Mutation(double p_m) {
+    for (int i=0; i<_population_size; i++) {
+        for (int j=0;j<_gene_length;j++) {
+            double pm = (rand()/(double)RAND_MAX);
+            if (pm<p_m) {
+                *(population[i+_population_size]->bits+j)
+                     = 1-*(population[i+_population_size]->bits+j);
+            }
+        }
+    }
+}
+
+// population survivor selection
+void GeneticAlgorithm::Survivor() {
+    for(int i=0;i<_population_size;i++) {
+        population[i + _population_size]->CalcFitness();
+    }
+    sort(population.begin(), population.begin()+_population_size*2, utility::FitnessCmp);
+    max_fitness = population[0]->fitness;
 }
 
 void GeneticAlgorithm::Print() {
@@ -61,14 +96,6 @@ void GeneticAlgorithm::Print(PrintMode mode) {
         Summary();
     }
     
-}
-
-
-void GeneticAlgorithm::Crossover(double p_c, int n_tnmt) {
-    TwoPtCrossover(p_c, n_tnmt);
-    for (int i = 0; i < _population_size * 2;i++) {
-        population[i]->CalcFitness();
-    }
 }
 
 individual::Individual* GeneticAlgorithm::TnmtSelection(int n_tnmt) {
@@ -132,9 +159,9 @@ void GeneticAlgorithm::UniformCrossover(double p_c, int n_tnmt) {
             parent2 = TnmtSelection(n_tnmt);
         }
         
-        for(int j=0; j<_gene_length; j++) {
+        for (int j=0; j<_gene_length; j++) {
             double pc = (rand()/(double)RAND_MAX);
-            if(pc < p_c) {
+            if (pc < p_c) {
                 *(population[i*2+_population_size]->bits+j) = *(parent1->bits+j);
                 *(population[i*2+1+_population_size]->bits+j) = *(parent2->bits+j);
             } else  {
@@ -145,29 +172,7 @@ void GeneticAlgorithm::UniformCrossover(double p_c, int n_tnmt) {
     }
 }
 
-void GeneticAlgorithm::Mutation(double p_m) {
-    for (int i=0; i<_population_size; i++) {
-        for (int j=0;j<_gene_length;j++) {
-            double pm = (rand()/(double)RAND_MAX);
-            if (pm<p_m) {
-                *(population[i+_population_size]->bits+j)
-                     = 1-*(population[i+_population_size]->bits+j);
-            }
-        }
-    }
-    for (int i = 0; i < _population_size * 2;i++) {
-        population[i]->CalcFitness();
-    }
-}
 
-
-void GeneticAlgorithm::Survivor() {
-    for(int i=0;i<_population_size;i++) {
-        population[i + _population_size]->CalcFitness();
-    }
-    sort(population.begin(), population.begin()+_population_size*2, utility::FitnessCmp);
-    max_fitness = population[0]->fitness;
-}
 void GeneticAlgorithm::Summary() {
     double sum = 0;
     double mean = 0;
@@ -180,11 +185,10 @@ void GeneticAlgorithm::Summary() {
         var += pow((population[i]->fitness - mean), 2);
     }
     var /= double(_population_size);
-    std::cout  << "Summary: " << std::endl
-        << std::setw(7) << std::fixed << std::setprecision(2) 
-        << "\tBest:  " << population[0]->fitness << std::endl
-        << "\tMean: " << mean << std::endl
-        << "\tvar:  " << var << std::endl;
+    std::cout << std::setw(7) << std::fixed << std::setprecision(2) 
+              << "Best:  " << population[0]->fitness << std::endl
+              << "Mean: " << mean << std::endl
+              << "var:  " << var << std::endl;
 }
 
 GeneticAlgorithm::~GeneticAlgorithm() {

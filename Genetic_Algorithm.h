@@ -1,13 +1,10 @@
 #ifndef GENETIC_ALGORITHM_H_
 #define GENETIC_ALGORITHM_H_
 
-#include <iostream>
-#include <cstdlib>
-#include <cstdio>
-#include <ctime>
 #include <cmath>
+#include <ctime>
+#include <iostream>
 #include <vector>
-//#include <functional>
 
 #include "individual.h"
 #include "utility.h"
@@ -21,6 +18,15 @@ typedef enum {
     best_fitness,
     summary
 } PrintMode;
+
+typedef enum {
+    two_pt,
+    uniform
+} CrossoverMethod;
+
+//typedef std::chrono::high_resolution_clock::time_point TimeVar;
+
+//#define timeNow() std::chrono::high_resolution_clock::now()
 
 // GeneticAlgorithm
 class GeneticAlgorithm {
@@ -42,7 +48,7 @@ class GeneticAlgorithm {
         ~GeneticAlgorithm();
         void Initial(int len);
         void Selection();
-        void Crossover(double p_c, int n_tnmt);
+        void Crossover(CrossoverMethod, double p_c, int n_tnmt);
         void Mutation(double p_m);
         void Survivor();
         void Print();
