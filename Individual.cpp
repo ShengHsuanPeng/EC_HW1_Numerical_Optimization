@@ -1,16 +1,15 @@
-#include "Individual.h"
+#include "individual.h"
+
 #include <iomanip>
 
-namespace Individual
-{
-individual::individual(int N_X, int len, double (*fitness_fn)(int *, chromo_typ), bool child)
-{
-    gene_size = {N_X*len, N_X, len};
+namespace individual {
+
+Individual::Individual(int n_of_x, int x_len, double (*fitness_fn)(int *, ChromoTyp), bool child) {
+    gene_size = {n_of_x*x_len, n_of_x, x_len};
     fitnessFN = fitness_fn;
-    bits = new int[N_X * len];
+    bits = new int[n_of_x * x_len];
    
-    for (int i = 0; i < N_X*len; i++)
-    {
+    for (int i = 0; i < n_of_x*x_len; i++) {
         if(child == false)
             *(bits + i) = (rand() >= 0.5 * (double)RAND_MAX) ? 1 : 0;
         else
@@ -19,52 +18,49 @@ individual::individual(int N_X, int len, double (*fitness_fn)(int *, chromo_typ)
     
     fitness = fitnessFN(bits, gene_size);
 }
-void individual::calc_fitness() 
-{
+void Individual::CalcFitness() {
     fitness = fitnessFN(bits, gene_size);
 }
-void individual::print()
-{
+void Individual::print() {
     std::cout << "----------------" << std::endl;
-    for (int i = 0; i < gene_size.N; i++) 
-    {
-        int index = i * gene_size.len;
-        for (int j = 0; j < gene_size.len; j++)
+    for (int i = 0; i < gene_size.n_of_x; i++) {
+        int index = i * gene_size.x_len;
+        for (int j = 0; j < gene_size.x_len; j++)
             std::cout << *(bits + index + j);
         std::cout << std::endl;
     }
     std::cout << "----------------" << std::endl;
-    std::cout << "fitness: " << std::setw(7) << std::fixed << std::setprecision(2) << fitness << std::endl;
+    std::cout << "fitness: " << std::setw(7) << std::fixed
+              << std::setprecision(2) << fitness << std::endl;
 }
-void individual::print(print_mode mode)
-{
-    switch(mode)
-    {
-        case print_mode::silent:
-            break;
-        case print_mode::fitness:
-            std::cout << "fitness: " << std::setw(7) << std::fixed << std::setprecision(2) << fitness << std::endl;
-            break;
-        case print_mode::whole:
-            std::cout << "----------------" << std::endl;
-            for (int i = 0; i < gene_size.N; i++) 
-            {
-                int index = i * gene_size.len;
-                for (int j = 0; j < gene_size.len; j++)
-                    std::cout << *(bits + index + j);
-                std::cout << std::endl;
-            }
-            std::cout << "----------------" << std::endl;
-            std::cout << "fitness: " << std::setw(7) << std::fixed << std::setprecision(2) << fitness << std::endl;
-            break;
-        case oneline:
-            std::cout << "fitness: " << std::setw(7) << std::fixed << std::setprecision(2) << fitness << " | ";
-            for (int i = 0; i < gene_size.gene_length; i++) 
-            {
-                std::cout << *(bits + i);
-            }
+void Individual::print(PrintMode mode) {
+    switch(mode) {
+      case PrintMode::silent:
+        break;
+      case PrintMode::fitness:
+        std::cout << "fitness: " << std::setw(7) << std::fixed 
+                  << std::setprecision(2) << fitness << std::endl;
+        break;
+      case PrintMode::whole:
+        std::cout << "----------------" << std::endl;
+        for (int i = 0; i < gene_size.n_of_x; i++) {
+            int index = i * gene_size.x_len;
+            for (int j = 0; j < gene_size.x_len; j++)
+                std::cout << *(bits + index + j);
             std::cout << std::endl;
-            break;
+        }
+        std::cout << "----------------" << std::endl;
+        std::cout << "fitness: " << std::setw(7) << std::fixed 
+                  << std::setprecision(2) << fitness << std::endl;
+        break;
+      case oneline:
+        std::cout << "fitness: " << std::setw(7) << std::fixed 
+                  << std::setprecision(2) << fitness << " | ";
+        for (int i = 0; i < gene_size.gene_length; i++) {
+            std::cout << *(bits + i);
+        }
+        std::cout << std::endl;
+        break;
     }
 }
-}
+} // namespace individual

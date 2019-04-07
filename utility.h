@@ -1,10 +1,9 @@
-#ifndef UTILITY
-#define UTILITY
-#include "Individual.h"
+#ifndef UTILITY_H_
+#define UTILITY_H_
+#include "individual.h"
 
-namespace utility
-{
-bool fitness_cmp(Individual::individual* i1, Individual::individual* i2);
-}
+namespace utility {
+bool FitnessCmp(individual::Individual* i1, individual::Individual* i2);
+} // namespace utility
 
-#endif
+#endif // UTILITY_H_

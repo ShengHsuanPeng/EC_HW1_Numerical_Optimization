@@ -1,40 +1,39 @@
-#ifndef INDIVIDUAL
-#define INDIVIDUAL
+#ifndef INDIVIDUAL_H_
+#define INDIVIDUAL_H_
+
 #include <iostream>
 #include <string>
 
-namespace Individual
-{
-typedef enum
-{
+namespace individual {
+
+typedef enum {
     silent,
     fitness,
     whole,
     oneline
-} print_mode;
+} PrintMode;
 
-struct chromo_typ {
+struct ChromoTyp {
     int gene_length;
-    int N;
-    int len;
+    int n_of_x;
+    int x_len;
 };
 
-class individual
-{
+// define for each individual
+class Individual {
     private:
-        
-        double (*fitnessFN)(int *, chromo_typ);
+        double (*fitnessFN)(int *, ChromoTyp);
 
     public:
         int *bits;
         double fitness;
-        chromo_typ gene_size;
-        individual() : bits(NULL), fitness(0.0f){};
-        individual(int N_X, int len, double (*fitness_fn)(int *, chromo_typ), bool child);
+        ChromoTyp gene_size;
+        Individual() : bits(NULL), fitness(0.0f){};
+        Individual(int n_of_x, int x_len, double (*fitness_fn)(int *, ChromoTyp), bool child);
         void print();
-        void print(print_mode);
-        void calc_fitness();
+        void print(PrintMode);
+        void CalcFitness();
 };
-}
+} // namespace individual
 
-#endif
+#endif // INDIVIDUAL_H_

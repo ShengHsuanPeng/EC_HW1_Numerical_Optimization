@@ -1,5 +1,5 @@
-#ifndef GENETIC_ALGORITHM
-#define GENETIC_ALGORITHM
+#ifndef GENETIC_ALGORITHM_H_
+#define GENETIC_ALGORITHM_H_
 
 #include <iostream>
 #include <cstdlib>
@@ -8,40 +8,47 @@
 #include <cmath>
 #include <vector>
 //#include <functional>
-#include "Individual.h"
+
+#include "individual.h"
 #include "utility.h"
 
+namespace genetic_algorithm {
 
-typedef enum
-{
+typedef enum {
     whole,
-    children
-} print_mode;
+    children,
+    best,
+    best_fitness,
+    summary
+} PrintMode;
 
-class Genetic_Algorithm
-{
+// GeneticAlgorithm
+class GeneticAlgorithm {
     private:
         void TwoPtCrossover(double p_c, int n_tnmt);
         void UniformCrossover(double p_c, int n_tnmt);
-        Individual::individual* TnmtSelection(int n_tnmt);
+        individual::Individual* TnmtSelection(int n_tnmt);
+        void Summary();
 
       protected:
-        std::vector<Individual::individual*> population;
+        std::vector<individual::Individual*> population;
         int _population_size;
         int _gene_length;
-        double (*_fitnessFn)(int *, Individual::chromo_typ);
+        double (*_fitnessFn)(int *, individual::ChromoTyp);
 
     public:
         double max_fitness;
-        Genetic_Algorithm(int, double (*fitnessFn)(int *, Individual::chromo_typ));
-        ~Genetic_Algorithm();
+        GeneticAlgorithm(int, double (*fitnessFn)(int *, individual::ChromoTyp));
+        ~GeneticAlgorithm();
         void Initial(int len);
         void Selection();
         void Crossover(double p_c, int n_tnmt);
         void Mutation(double p_m);
         void Survivor();
         void Print();
-        void Print(print_mode);
+        void Print(PrintMode);
 };
 
-#endif
+} // namespace genetic_algorithm 
+
+#endif // GENETIC_ALGORITHM_H_
