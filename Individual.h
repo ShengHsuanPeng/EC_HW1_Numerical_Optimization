@@ -1,7 +1,7 @@
 #ifndef INDIVIDUAL
 #define INDIVIDUAL
 #include <iostream>
-using namespace std;
+//using namespace std;
 
 struct chromo_typ {
     int gene_length;
@@ -35,6 +35,7 @@ class individual
         }
         void print()
         {
+            cout << "----------------" << endl;
             for (int i = 0; i < gene_size.N; i++) 
             {
                 int index = i * gene_size.len;

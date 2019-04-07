@@ -1,14 +1,6 @@
 #include "Genetic_Algorithm.h"
 #include <iostream>
-using namespace std;
-#define PRINT 0
-#define FILENAME "BinaryGA_2points.csv"
-#define TIMENAME "b2time.csv"
-
-const int LENGTH = 10;
-const int GENE_LEN = N_X*LENGTH;
-const double PROBABILITY_MUTATION = (1.0/(GENE_LEN))*PARA_A+PARA_B;
-
+//using namespace std;
 
 double Schwefel_Function(int* bits, chromo_typ size)
 {
@@ -35,45 +27,31 @@ class Binary_GA: public Genetic_Algorithm
     public:
         Binary_GA(int population_size, double (*fitnessFn)(int *, chromo_typ))
         : Genetic_Algorithm(population_size, fitnessFn){}
+
         void Initial(int N_X, int len)
         {
+            _gene_length = N_X*len;
             for (int i = 0; i < _population_size; i++)
             {
                 population[i] = individual(N_X, len, _fitnessFn);
             }
         }
-        void Selection();
-        void Crossover();
-        void Mutation();
-        void Survivor();
 };
-
-
 
 int main(){
 	srand(time(NULL));
-    Binary_GA biGA(100, Schwefel_Function);
     clock_t t1, t2;
+    Binary_GA biGA(100, Schwefel_Function);
+    biGA.Initial(10, 10);
     t1=clock();
-    for(int generation=0;generation<=GENERATION;generation++)
+    for(int generation=0;generation<=10;generation++)
     {
-        if(PRINT)cout << "================Gen: " << generation << "================\n";
-        biGA.Fitness(generation);
-        biGA.Print(generation);
-        biGA.Crossover();
-        biGA.Mutation();
+        cout << "================Gen: " << generation << "================\n";
+        biGA.Crossover(0.9, 5);
+        biGA.Mutation(0.1);
         biGA.Survivor();
+        biGA.Print();
     }
     t2 = clock();
-    if(fopen(TIMENAME,"rb+")==NULL)
-    {
-        FILE* timer = fopen(TIMENAME,"ab+");
-        fprintf(timer,"time,N_X,n,pc,pm,gen,ppl\n");
-        fprintf(timer,"%lf,%d,%d,%lf,%lf,%d,%d,\n",(t2-t1)/(double)(CLOCKS_PER_SEC),N_X,N_TOURNAMENT,PROBABILITY_CROSSOVER,PROBABILITY_MUTATION,GENERATION,POPULATION);
-    }
-    else
-    {
-        FILE* timer = fopen(TIMENAME,"ab+");
-        fprintf(timer,"%lf,\n",(t2-t1)/(double)(CLOCKS_PER_SEC));
-    }
+    
 }

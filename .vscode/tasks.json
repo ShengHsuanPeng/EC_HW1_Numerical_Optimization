@@ -5,7 +5,7 @@
         "label": "Compile", 
         "command": "clang++", 
         "args": [
-          "${file}",
+          "*.cpp",
           "-o",
           "${fileDirname}/${fileBasenameNoExtension}.exe",
           "-g", 
@@ -14,7 +14,7 @@
           "-fcolor-diagnostics",
           "--target=x86_64-w64-mingw", 
           "-std=c++17",
-          //"-O2"
+          "-O2"
         ], 
         "type": "shell", 
         "group": {
