@@ -30,27 +30,29 @@ double Schwefel_Function(int* bits, chromo_typ size)
     return fsch;
 }
 
-
-
-
-
-
 class Binary_GA: public Genetic_Algorithm
 {
     public:
         Binary_GA(int population_size, double (*fitnessFn)(int *, chromo_typ))
         : Genetic_Algorithm(population_size, fitnessFn){}
-        Initial(int N_X, int len)
+        void Initial(int N_X, int len)
         {
-            Genetic_Algorithm.Initial(N_X * len);
+            for (int i = 0; i < _population_size; i++)
+            {
+                population[i] = individual(N_X, len, _fitnessFn);
+            }
         }
+        void Selection();
+        void Crossover();
+        void Mutation();
+        void Survivor();
 };
 
 
 
 int main(){
 	srand(time(NULL));
-    Genetic_Algorithm biGA;
+    Binary_GA biGA(100, Schwefel_Function);
     clock_t t1, t2;
     t1=clock();
     for(int generation=0;generation<=GENERATION;generation++)

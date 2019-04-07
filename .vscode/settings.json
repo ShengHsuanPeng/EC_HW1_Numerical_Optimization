@@ -30,6 +30,7 @@
     "clang.executable": "clang",
     "files.associations": {
       "new": "cpp",
-      "iostream": "cpp"
+      "iostream": "cpp",
+      "ostream": "cpp"
     }
   }

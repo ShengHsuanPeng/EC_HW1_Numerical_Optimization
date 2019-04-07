@@ -10,11 +10,15 @@
 //#include <functional>
 #include "define.h"
 #include "Individual.h"
+#include "utility.h"
 
 using namespace std;
 
 class Genetic_Algorithm
 {
+    private:
+        void TwoPtCrossover(int p_c);
+
     protected:
         vector<individual> population;
         int _population_size;
@@ -23,12 +27,14 @@ class Genetic_Algorithm
         
         void Print();
         double (*_fitnessFn)(int *, chromo_typ);
-    public:
+        individual TnmtSelection(int n_tnmt);
+
+      public:
         Genetic_Algorithm(int, double (*fitnessFn)(int *, chromo_typ));
         void Initial(int len);
         void Selection();
-        void Crossover();
-        void Mutation();
+        void Crossover(int p_c);
+        void Mutation(int p_m);
         void Survivor();
 };
 

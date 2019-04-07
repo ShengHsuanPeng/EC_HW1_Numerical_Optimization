@@ -1,6 +1,7 @@
 #include <iostream>
 #include <ctime>
 #include <cmath>
+#include <vector>
 using namespace std;
 
 struct chromo_typ { int N; int len; };
@@ -48,6 +49,7 @@ class individual
                   *(bits + index + j) = (rand() >= 0.5 * (double)RAND_MAX) ? 1 : 0;
           }
           fitness = fitnessFN(bits, gene_size);
+          //print();
         }
         void print(){
             for (int i = 0; i < gene_size.N; i++) 
@@ -65,12 +67,39 @@ class individual
 
 int main()
 {
+    /*vector<individual> population;
+    population.resize(5);
     srand(time(NULL));
+    for (int i = 0; i < 5;i++)
+    {
+        individual* chr = new individual(10, 10, Schwefel_Function);
+        population[i] = (*chr);
+        cout << "pointer: " << chr << endl;
+        cout << "pointer: " << &population[i] << endl;
+    }
     system("pause");
-    individual chr(10, 10, Schwefel_Function);
+*/
+    
+    vector<int> selected(5);
+    p:
+    for (int i = 0; i < 5;i++)
+    {
+        selected[i] = rand() % 10;
+        for (int j = 0; j < i; j++)
+        {
+            if(selected[j]==selected[i])
+            {
+                j = 0;
+                selected[i] = rand() % 10;
+                cout << "same";
+            }
+        }
+    }
+    for(int p : selected){
+        cout << p << " ";
+    }
+    
     system("pause");
-    chr.print();
-
-    system("pause");
+    goto p;
     return 0;
 }

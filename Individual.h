@@ -4,7 +4,7 @@
 using namespace std;
 
 struct chromo_typ {
-    int shape;
+    int gene_length;
     int N;
     int len;
 };
@@ -12,16 +12,17 @@ struct chromo_typ {
 class individual
 {
     private:
-        chromo_typ gene_size;
+        
         double (*fitnessFN)(int *, chromo_typ);
 
     public:
         int *bits;
         double fitness;
+        chromo_typ gene_size;
         individual() : bits(NULL), fitness(0.0f){};
         individual(int N_X, int len, double (*fitness_fn)(int *, chromo_typ))
         {
-            gene_size = {N_X, len};
+            gene_size = {N_X*len, N_X, len};
             fitnessFN = fitness_fn;
             bits = new int[N_X * len];
             for (int i = 0; i < N_X; i++)
