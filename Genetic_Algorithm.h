@@ -11,30 +11,37 @@
 #include "Individual.h"
 #include "utility.h"
 
-//using namespace std;
+
+typedef enum
+{
+    whole,
+    children
+} print_mode;
 
 class Genetic_Algorithm
 {
     private:
         void TwoPtCrossover(double p_c, int n_tnmt);
         void UniformCrossover(double p_c, int n_tnmt);
-        individual* TnmtSelection(int n_tnmt);
+        Individual::individual* TnmtSelection(int n_tnmt);
 
       protected:
-        vector<individual> population;
+        std::vector<Individual::individual*> population;
         int _population_size;
         int _gene_length;
-        double (*_fitnessFn)(int *, chromo_typ);
+        double (*_fitnessFn)(int *, Individual::chromo_typ);
 
     public:
         double max_fitness;
-        Genetic_Algorithm(int, double (*fitnessFn)(int *, chromo_typ));
+        Genetic_Algorithm(int, double (*fitnessFn)(int *, Individual::chromo_typ));
+        ~Genetic_Algorithm();
         void Initial(int len);
         void Selection();
         void Crossover(double p_c, int n_tnmt);
         void Mutation(double p_m);
         void Survivor();
         void Print();
+        void Print(print_mode);
 };
 
 #endif
