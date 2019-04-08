@@ -1,6 +1,3 @@
-filename = 'aoto_eps\out.csv'
-outname = 'eps\test.eps'
-columns = 1
 
 
 set style data linespoints

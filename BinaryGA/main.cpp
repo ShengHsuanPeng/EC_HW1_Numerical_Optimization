@@ -16,6 +16,9 @@ int main(int argc, char *argv[]){
     int n_tnmt = 2;
     double p_c = 0.9;
     double p_m = 0.1;
+    genetic_algorithm::CrossoverMethod method = genetic_algorithm::two_pt;
+    int title = 0;
+    char titlename[64];
 
     for (int i = 1; i < argc-1; i++) { 
 
@@ -35,20 +38,28 @@ int main(int argc, char *argv[]){
             p_c = atof(argv[i + 1]);
         } else if (strcmp(argv[i], "-pm") ==0) {
             p_m = atof(argv[i + 1]);
+        } else if (strcmp(argv[i], "-method") ==0) {
+            if (strcmp(argv[i+1], "2pt") ==0) {
+                method = genetic_algorithm::two_pt;
+            } else if (strcmp(argv[i+1], "uni") ==0) {
+                method = genetic_algorithm::uniform;
+            }
+        } else if (strcmp(argv[i], "-title") ==0) {
+            title = 1;
+            strcpy(titlename, argv[i + 1]);
         }
     }
 
     srand(time(NULL));
     std::vector<double> log(generation, 0.0);
     double sum_of_time=0;
-    int progress_bar = 100 / num_of_trials;
 
     for (int trial = 0; trial < num_of_trials; trial++) {
         binary_ga::BinaryGa biGA(population, binary_ga::Schwefel_Function);
         biGA.Initial(n_of_x, x_len);
         clock_t t1 = clock();
         for (int gen=0; gen<generation; gen++) {
-            biGA.Crossover(genetic_algorithm::two_pt, p_c, n_tnmt);
+            biGA.Crossover(method, p_c, n_tnmt);
             biGA.Mutation(p_m);
             biGA.Survivor();
             log[gen] += biGA.max_fitness;
@@ -67,15 +78,17 @@ int main(int argc, char *argv[]){
         std::cout << "] - " << sum_of_time << "s - fitness: " << log[generation-1]/double(trial+1) <<"\r";
         std::cout.flush();
     }
-    std::cout << "\n";
     double avg_time = sum_of_time / double(num_of_trials);
-    //std::cout << "---------------\naverage time: " << avg_time << std::endl;
 
     std::ofstream log_file;
-    log_file.open ("binary_ga.csv", std::ios::app);
-    log_file << "n" << n_tnmt << "-Pc" << p_c << "-Pm" << p_m << ", ";
+    log_file.open ("result.csv", std::ios::app);
+    if (title==0) {
+        log_file << "bGA:n" << n_tnmt << "-Pc" << p_c << "-Pm" << p_m << ", ";
+    } else {
+        log_file << titlename << ",";
+    }
     for (int gen=0; gen<generation; gen++) {
-        log_file << log[gen]/double(num_of_trials) << ", ";
+        log_file << log[gen]/double(num_of_trials) << ",";
     }
     log_file << std::endl;
     log_file.close();

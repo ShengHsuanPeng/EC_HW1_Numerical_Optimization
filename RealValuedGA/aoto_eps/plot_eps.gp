@@ -1,6 +1,6 @@
 filename = 'aoto_eps\out.csv'
-outname = 'eps\test.eps'
-columns = 1
+outname = 'eps\change_pc_uni.eps'
+columns = 10
 
 
 set style data linespoints
