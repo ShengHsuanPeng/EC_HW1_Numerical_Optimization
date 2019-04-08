@@ -66,6 +66,7 @@
       "algorithm": "cpp",
       "iomanip": "cpp",
       "chrono": "cpp",
-      "ratio": "cpp"
+      "ratio": "cpp",
+      "cstring": "cpp"
     }
   }
