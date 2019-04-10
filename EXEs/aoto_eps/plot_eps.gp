@@ -1,5 +1,5 @@
 filename = 'aoto_eps\out.csv'
-outname = 'eps\4GAs-N100.eps'
+outname = 'eps\4GAs-P1000N100.eps'
 columns = 4
 
 
