@@ -5,13 +5,14 @@ namespace binary_ga {
 double Schwefel_Function(int* bits, individual::ChromoTyp size) {
     int n_of_x = size.n_of_x;
     int x_len = size.x_len;
-    
+    double power_of_two[10] = {512, 256, 128, 64, 32, 16, 8, 4, 2, 1};
+
     double fsch=418.98291*n_of_x;
     for (int j=0; j<n_of_x; j++) {
         int index = j * x_len;
         double x_i=0;
         for (int k=0;k<x_len;k++) {
-            x_i+=double(*(bits + index + k))*pow(2, x_len-k-1);
+            x_i+=double(*(bits + index + k))*power_of_two[k];
         }
         x_i-=512;
         fsch -= x_i*sin(sqrt(fabs(x_i)));

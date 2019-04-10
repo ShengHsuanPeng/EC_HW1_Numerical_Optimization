@@ -82,7 +82,7 @@ int main(int argc, char *argv[]){
         std::cout.flush();
     }
     double avg_time = sum_of_time / double(num_of_trials);
-
+    std::cout << "\n";
     std::ofstream log_file;
     log_file.open (outname, std::ios::app);
     if (title==0) {
