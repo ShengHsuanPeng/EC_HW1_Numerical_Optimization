@@ -19,6 +19,7 @@ int main(int argc, char *argv[]){
     genetic_algorithm::CrossoverMethod method = genetic_algorithm::two_pt;
     int title = 0;
     char titlename[64];
+    char outname[64] = "result.csv";
 
     for (int i = 1; i < argc-1; i++) { 
 
@@ -47,6 +48,8 @@ int main(int argc, char *argv[]){
         } else if (strcmp(argv[i], "-title") ==0) {
             title = 1;
             strcpy(titlename, argv[i + 1]);
+        } else if (strcmp(argv[i], "-o") ==0) {
+            strcpy(outname, argv[i + 1]);
         }
     }
 
@@ -81,7 +84,7 @@ int main(int argc, char *argv[]){
     double avg_time = sum_of_time / double(num_of_trials);
 
     std::ofstream log_file;
-    log_file.open ("result.csv", std::ios::app);
+    log_file.open (outname, std::ios::app);
     if (title==0) {
         log_file << "bGA:n" << n_tnmt << "-Pc" << p_c << "-Pm" << p_m << ", ";
     } else {

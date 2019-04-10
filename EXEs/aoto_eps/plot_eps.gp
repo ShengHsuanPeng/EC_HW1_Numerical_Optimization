@@ -1,6 +1,6 @@
 filename = 'aoto_eps\out.csv'
-outname = 'eps\4GAs-P1000N100.eps'
-columns = 4
+outname = 'eps\4GAs-P1000N100G10000.eps'
+columns = 1
 
 
 set style data linespoints
@@ -12,14 +12,15 @@ set term postscript eps 21 enhanced color solid font ",24"
 #============================================================================
 set autoscale
 #set logscale y
-#set format y "10^{%L}"
+#set format x "%1.1e"
 set output outname
 
 set ylabel "f(x)"
 set xlabel "generations"
 #set xrange [:]
-set yrange [:]
+#set yrange [:]
 set colorsequence classic
+set xtics 2000
 
 set pointsize 1
 

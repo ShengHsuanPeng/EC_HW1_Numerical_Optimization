@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.2)  9 APR 2019 17:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.2)  10 APR 2019 13:54
 entering extended mode
 **"g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/HW1-report.tex"
 ("g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/HW1-report.tex"
@@ -455,6 +455,48 @@ Package: multirow 2019/01/01 v2.4 Span multiple rows of a table
 
 LaTeX Warning: Label `fig' multiply defined.
 
+
+LaTeX Warning: Label `fig' multiply defined.
+
+
+LaTeX Warning: Label `fig' multiply defined.
+
+
+LaTeX Warning: Label `fig' multiply defined.
+
+
+LaTeX Warning: Label `fig' multiply defined.
+
+
+LaTeX Warning: Label `fig' multiply defined.
+
+
+LaTeX Warning: Label `fig' multiply defined.
+
+
+LaTeX Warning: Label `fig' multiply defined.
+
+
+LaTeX Warning: Label `fig' multiply defined.
+
+
+LaTeX Warning: Label `fig' multiply defined.
+
+
+LaTeX Warning: Label `fig' multiply defined.
+
+
+LaTeX Warning: Label `fig' multiply defined.
+
+
+LaTeX Warning: Label `fig' multiply defined.
+
+
+LaTeX Warning: Label `fig' multiply defined.
+
+
+LaTeX Warning: Label `fig' multiply defined.
+
 )
 \openout1 = `HW1-report.aux'.
 
@@ -617,6 +659,95 @@ File: fig/cmp4GA/4GAs-eps-converted-to.pdf Graphic file (type pdf)
 <use fig/cmp4GA/4GAs-eps-converted-to.pdf>
 Package pdftex.def Info: fig/cmp4GA/4GAs-eps-converted-to.pdf  used on input line 73.
 (pdftex.def)             Requested size: 213.39566pt x 149.37906pt.
+Package epstopdf Info: Source file: <fig/bGA/change_pc_uni.eps>
+(epstopdf)                    date: 2019-04-08 21:47:10
+(epstopdf)                    size: 44100 bytes
+(epstopdf)             Output file: <fig/bGA/change_pc_uni-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-04-10 10:35:34
+(epstopdf)                    size: 11725 bytes
+(epstopdf)             Command: <epstopdf --outfile=fig/bGA/change_pc_uni-eps-converted-to.pdf fig/bGA/change_pc_uni.eps>
+(epstopdf)             \includegraphics on input line 101.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/bGA/change_pc_uni-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<fig/bGA/change_pc_uni-eps-converted-to.pdf, id=2, 361.35pt x 252.945pt>
+File: fig/bGA/change_pc_uni-eps-converted-to.pdf Graphic file (type pdf)
+<use fig/bGA/change_pc_uni-eps-converted-to.pdf>
+Package pdftex.def Info: fig/bGA/change_pc_uni-eps-converted-to.pdf  used on input line 101.
+(pdftex.def)             Requested size: 213.39566pt x 149.37906pt.
+Package epstopdf Info: Source file: <fig/bGA/change_pm_uni.eps>
+(epstopdf)                    date: 2019-04-08 21:26:13
+(epstopdf)                    size: 48260 bytes
+(epstopdf)             Output file: <fig/bGA/change_pm_uni-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-04-10 10:35:35
+(epstopdf)                    size: 12911 bytes
+(epstopdf)             Command: <epstopdf --outfile=fig/bGA/change_pm_uni-eps-converted-to.pdf fig/bGA/change_pm_uni.eps>
+(epstopdf)             \includegraphics on input line 107.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/bGA/change_pm_uni-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<fig/bGA/change_pm_uni-eps-converted-to.pdf, id=3, 361.35pt x 252.945pt>
+File: fig/bGA/change_pm_uni-eps-converted-to.pdf Graphic file (type pdf)
+<use fig/bGA/change_pm_uni-eps-converted-to.pdf>
+Package pdftex.def Info: fig/bGA/change_pm_uni-eps-converted-to.pdf  used on input line 107.
+(pdftex.def)             Requested size: 213.39566pt x 149.37906pt.
+Package epstopdf Info: Source file: <fig/bGA/change_n_uni.eps>
+(epstopdf)                    date: 2019-04-08 21:41:54
+(epstopdf)                    size: 48062 bytes
+(epstopdf)             Output file: <fig/bGA/change_n_uni-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-04-10 10:35:37
+(epstopdf)                    size: 12826 bytes
+(epstopdf)             Command: <epstopdf --outfile=fig/bGA/change_n_uni-eps-converted-to.pdf fig/bGA/change_n_uni.eps>
+(epstopdf)             \includegraphics on input line 113.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/bGA/change_n_uni-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<fig/bGA/change_n_uni-eps-converted-to.pdf, id=4, 361.35pt x 252.945pt>
+File: fig/bGA/change_n_uni-eps-converted-to.pdf Graphic file (type pdf)
+<use fig/bGA/change_n_uni-eps-converted-to.pdf>
+Package pdftex.def Info: fig/bGA/change_n_uni-eps-converted-to.pdf  used on input line 113.
+(pdftex.def)             Requested size: 213.39566pt x 149.37906pt.
+[1{C:/Users/Sheng Hsuan Peng/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+
+ <g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/cmp4GA/4GAs-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <fig/bGA/change_pc_2pt.eps>
+(epstopdf)                    date: 2019-04-08 20:45:39
+(epstopdf)                    size: 43545 bytes
+(epstopdf)             Output file: <fig/bGA/change_pc_2pt-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-04-10 11:00:06
+(epstopdf)                    size: 9857 bytes
+(epstopdf)             Command: <epstopdf --outfile=fig/bGA/change_pc_2pt-eps-converted-to.pdf fig/bGA/change_pc_2pt.eps>
+(epstopdf)             \includegraphics on input line 126.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/bGA/change_pc_2pt-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<fig/bGA/change_pc_2pt-eps-converted-to.pdf, id=26, 361.35pt x 252.945pt>
+File: fig/bGA/change_pc_2pt-eps-converted-to.pdf Graphic file (type pdf)
+<use fig/bGA/change_pc_2pt-eps-converted-to.pdf>
+Package pdftex.def Info: fig/bGA/change_pc_2pt-eps-converted-to.pdf  used on input line 126.
+(pdftex.def)             Requested size: 213.39566pt x 149.37906pt.
+Package epstopdf Info: Source file: <fig/bGA/change_pm_2pt.eps>
+(epstopdf)                    date: 2019-04-08 21:23:45
+(epstopdf)                    size: 47871 bytes
+(epstopdf)             Output file: <fig/bGA/change_pm_2pt-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-04-10 11:00:07
+(epstopdf)                    size: 11787 bytes
+(epstopdf)             Command: <epstopdf --outfile=fig/bGA/change_pm_2pt-eps-converted-to.pdf fig/bGA/change_pm_2pt.eps>
+(epstopdf)             \includegraphics on input line 132.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/bGA/change_pm_2pt-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<fig/bGA/change_pm_2pt-eps-converted-to.pdf, id=27, 361.35pt x 252.945pt>
+File: fig/bGA/change_pm_2pt-eps-converted-to.pdf Graphic file (type pdf)
+<use fig/bGA/change_pm_2pt-eps-converted-to.pdf>
+Package pdftex.def Info: fig/bGA/change_pm_2pt-eps-converted-to.pdf  used on input line 132.
+(pdftex.def)             Requested size: 213.39566pt x 149.37906pt.
 Package epstopdf Info: Source file: <fig/bGA/change_n_2pt.eps>
 (epstopdf)                    date: 2019-04-08 20:40:03
 (epstopdf)                    size: 47683 bytes
@@ -624,22 +755,170 @@ Package epstopdf Info: Source file: <fig/bGA/change_n_2pt.eps>
 (epstopdf)                    date: 2019-04-09 17:15:03
 (epstopdf)                    size: 10982 bytes
 (epstopdf)             Command: <epstopdf --outfile=fig/bGA/change_n_2pt-eps-converted-to.pdf fig/bGA/change_n_2pt.eps>
-(epstopdf)             \includegraphics on input line 96.
+(epstopdf)             \includegraphics on input line 138.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/bGA/change_n_2pt-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig/bGA/change_n_2pt-eps-converted-to.pdf, id=2, 361.35pt x 252.945pt>
+<fig/bGA/change_n_2pt-eps-converted-to.pdf, id=28, 361.35pt x 252.945pt>
 File: fig/bGA/change_n_2pt-eps-converted-to.pdf Graphic file (type pdf)
 <use fig/bGA/change_n_2pt-eps-converted-to.pdf>
-Package pdftex.def Info: fig/bGA/change_n_2pt-eps-converted-to.pdf  used on input line 96.
+Package pdftex.def Info: fig/bGA/change_n_2pt-eps-converted-to.pdf  used on input line 138.
 (pdftex.def)             Requested size: 213.39566pt x 149.37906pt.
-LaTeX Font Info:    Try loading font information for C70+bsmi on input line 102.
-("C:\Program Files\MiKTeX 2.9\tex/latex/cjk/UTF8\c70bsmi.fd"
-File: c70bsmi.fd 2015/04/18 4.8.4
-) ("C:\Program Files\MiKTeX 2.9\tex/latex/cjk/UTF8\c70bsmi.fdx"
-File: c70bsmi.fdx 2015/04/18 4.8.4
-)
+Package epstopdf Info: Source file: <fig/rGA/change_pc_uni.eps>
+(epstopdf)                    date: 2019-04-08 22:08:34
+(epstopdf)                    size: 43710 bytes
+(epstopdf)             Output file: <fig/rGA/change_pc_uni-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-04-10 11:18:57
+(epstopdf)                    size: 8168 bytes
+(epstopdf)             Command: <epstopdf --outfile=fig/rGA/change_pc_uni-eps-converted-to.pdf fig/rGA/change_pc_uni.eps>
+(epstopdf)             \includegraphics on input line 151.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/rGA/change_pc_uni-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<fig/rGA/change_pc_uni-eps-converted-to.pdf, id=29, 361.35pt x 252.945pt>
+File: fig/rGA/change_pc_uni-eps-converted-to.pdf Graphic file (type pdf)
+<use fig/rGA/change_pc_uni-eps-converted-to.pdf>
+Package pdftex.def Info: fig/rGA/change_pc_uni-eps-converted-to.pdf  used on input line 151.
+(pdftex.def)             Requested size: 213.39566pt x 149.37906pt.
+Package epstopdf Info: Source file: <fig/rGA/change_pm_uni.eps>
+(epstopdf)                    date: 2019-04-08 22:03:14
+(epstopdf)                    size: 47888 bytes
+(epstopdf)             Output file: <fig/rGA/change_pm_uni-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-04-10 11:18:59
+(epstopdf)                    size: 11345 bytes
+(epstopdf)             Command: <epstopdf --outfile=fig/rGA/change_pm_uni-eps-converted-to.pdf fig/rGA/change_pm_uni.eps>
+(epstopdf)             \includegraphics on input line 157.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/rGA/change_pm_uni-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<fig/rGA/change_pm_uni-eps-converted-to.pdf, id=30, 361.35pt x 252.945pt>
+File: fig/rGA/change_pm_uni-eps-converted-to.pdf Graphic file (type pdf)
+<use fig/rGA/change_pm_uni-eps-converted-to.pdf>
+Package pdftex.def Info: fig/rGA/change_pm_uni-eps-converted-to.pdf  used on input line 157.
+(pdftex.def)             Requested size: 213.39566pt x 149.37906pt.
+Package epstopdf Info: Source file: <fig/rGA/change_n_uni.eps>
+(epstopdf)                    date: 2019-04-08 22:07:13
+(epstopdf)                    size: 47671 bytes
+(epstopdf)             Output file: <fig/rGA/change_n_uni-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-04-10 11:19:00
+(epstopdf)                    size: 7829 bytes
+(epstopdf)             Command: <epstopdf --outfile=fig/rGA/change_n_uni-eps-converted-to.pdf fig/rGA/change_n_uni.eps>
+(epstopdf)             \includegraphics on input line 163.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/rGA/change_n_uni-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<fig/rGA/change_n_uni-eps-converted-to.pdf, id=31, 361.35pt x 252.945pt>
+File: fig/rGA/change_n_uni-eps-converted-to.pdf Graphic file (type pdf)
+<use fig/rGA/change_n_uni-eps-converted-to.pdf>
+Package pdftex.def Info: fig/rGA/change_n_uni-eps-converted-to.pdf  used on input line 163.
+(pdftex.def)             Requested size: 213.39566pt x 149.37906pt.
+[2 <g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/bGA/change_pc_uni-eps-converted-to.pdf> <g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/bGA/change_pm_uni-eps-converted-to.pdf> <g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/bGA/change_n_uni-eps-converted-to.pdf> <g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/bGA/change_pc_2pt-eps-converted-to.pdf> <g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/bGA/change_pm_2pt-eps-converted-to.pdf> <g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/bGA/change_n_2pt-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <fig/rGA/change_pc_whole.eps>
+(epstopdf)                    date: 2019-04-08 21:53:00
+(epstopdf)                    size: 44149 bytes
+(epstopdf)             Output file: <fig/rGA/change_pc_whole-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-04-10 11:32:58
+(epstopdf)                    size: 10569 bytes
+(epstopdf)             Command: <epstopdf --outfile=fig/rGA/change_pc_whole-eps-converted-to.pdf fig/rGA/change_pc_whole.eps>
+(epstopdf)             \includegraphics on input line 177.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/rGA/change_pc_whole-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<fig/rGA/change_pc_whole-eps-converted-to.pdf, id=53, 361.35pt x 252.945pt>
+File: fig/rGA/change_pc_whole-eps-converted-to.pdf Graphic file (type pdf)
+<use fig/rGA/change_pc_whole-eps-converted-to.pdf>
+Package pdftex.def Info: fig/rGA/change_pc_whole-eps-converted-to.pdf  used on input line 177.
+(pdftex.def)             Requested size: 213.39566pt x 149.37906pt.
+Package epstopdf Info: Source file: <fig/rGA/change_pm_whole.eps>
+(epstopdf)                    date: 2019-04-08 21:58:02
+(epstopdf)                    size: 48009 bytes
+(epstopdf)             Output file: <fig/rGA/change_pm_whole-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-04-10 11:32:59
+(epstopdf)                    size: 10921 bytes
+(epstopdf)             Command: <epstopdf --outfile=fig/rGA/change_pm_whole-eps-converted-to.pdf fig/rGA/change_pm_whole.eps>
+(epstopdf)             \includegraphics on input line 183.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/rGA/change_pm_whole-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<fig/rGA/change_pm_whole-eps-converted-to.pdf, id=54, 361.35pt x 252.945pt>
+File: fig/rGA/change_pm_whole-eps-converted-to.pdf Graphic file (type pdf)
+<use fig/rGA/change_pm_whole-eps-converted-to.pdf>
+Package pdftex.def Info: fig/rGA/change_pm_whole-eps-converted-to.pdf  used on input line 183.
+(pdftex.def)             Requested size: 213.39566pt x 149.37906pt.
+Package epstopdf Info: Source file: <fig/rGA/change_pm_whole10000.eps>
+(epstopdf)                    date: 2019-04-08 22:01:38
+(epstopdf)                    size: 193845 bytes
+(epstopdf)             Output file: <fig/rGA/change_pm_whole10000-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-04-10 11:37:09
+(epstopdf)                    size: 12781 bytes
+(epstopdf)             Command: <epstopdf --outfile=fig/rGA/change_pm_whole10000-eps-converted-to.pdf fig/rGA/change_pm_whole10000.eps>
+(epstopdf)             \includegraphics on input line 189.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/rGA/change_pm_whole10000-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<fig/rGA/change_pm_whole10000-eps-converted-to.pdf, id=55, 361.35pt x 252.945pt>
+File: fig/rGA/change_pm_whole10000-eps-converted-to.pdf Graphic file (type pdf)
+<use fig/rGA/change_pm_whole10000-eps-converted-to.pdf>
+Package pdftex.def Info: fig/rGA/change_pm_whole10000-eps-converted-to.pdf  used on input line 189.
+(pdftex.def)             Requested size: 213.39566pt x 149.37906pt.
+Package epstopdf Info: Source file: <fig/rGA/change_n_whold.eps>
+(epstopdf)                    date: 2019-04-08 22:06:50
+(epstopdf)                    size: 47807 bytes
+(epstopdf)             Output file: <fig/rGA/change_n_whold-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-04-10 11:33:24
+(epstopdf)                    size: 7848 bytes
+(epstopdf)             Command: <epstopdf --outfile=fig/rGA/change_n_whold-eps-converted-to.pdf fig/rGA/change_n_whold.eps>
+(epstopdf)             \includegraphics on input line 195.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/rGA/change_n_whold-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<fig/rGA/change_n_whold-eps-converted-to.pdf, id=56, 361.35pt x 252.945pt>
+File: fig/rGA/change_n_whold-eps-converted-to.pdf Graphic file (type pdf)
+<use fig/rGA/change_n_whold-eps-converted-to.pdf>
+Package pdftex.def Info: fig/rGA/change_n_whold-eps-converted-to.pdf  used on input line 195.
+(pdftex.def)             Requested size: 213.39566pt x 149.37906pt.
+Package epstopdf Info: Source file: <fig/rGA/change_a_whole.eps>
+(epstopdf)                    date: 2019-04-08 22:12:49
+(epstopdf)                    size: 51747 bytes
+(epstopdf)             Output file: <fig/rGA/change_a_whole-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-04-10 11:33:00
+(epstopdf)                    size: 8318 bytes
+(epstopdf)             Command: <epstopdf --outfile=fig/rGA/change_a_whole-eps-converted-to.pdf fig/rGA/change_a_whole.eps>
+(epstopdf)             \includegraphics on input line 201.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/rGA/change_a_whole-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<fig/rGA/change_a_whole-eps-converted-to.pdf, id=57, 361.35pt x 252.945pt>
+File: fig/rGA/change_a_whole-eps-converted-to.pdf Graphic file (type pdf)
+<use fig/rGA/change_a_whole-eps-converted-to.pdf>
+Package pdftex.def Info: fig/rGA/change_a_whole-eps-converted-to.pdf  used on input line 201.
+(pdftex.def)             Requested size: 213.39566pt x 149.37906pt.
+Package epstopdf Info: Source file: <fig/cmp4GA/4GAs-N100.eps>
+(epstopdf)                    date: 2019-04-08 22:41:04
+(epstopdf)                    size: 150105 bytes
+(epstopdf)             Output file: <fig/cmp4GA/4GAs-N100-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-04-10 12:19:20
+(epstopdf)                    size: 42552 bytes
+(epstopdf)             Command: <epstopdf --outfile=fig/cmp4GA/4GAs-N100-eps-converted-to.pdf fig/cmp4GA/4GAs-N100.eps>
+(epstopdf)             \includegraphics on input line 209.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/cmp4GA/4GAs-N100-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<fig/cmp4GA/4GAs-N100-eps-converted-to.pdf, id=58, 361.35pt x 252.945pt>
+File: fig/cmp4GA/4GAs-N100-eps-converted-to.pdf Graphic file (type pdf)
+<use fig/cmp4GA/4GAs-N100-eps-converted-to.pdf>
+Package pdftex.def Info: fig/cmp4GA/4GAs-N100-eps-converted-to.pdf  used on input line 209.
+(pdftex.def)             Requested size: 213.39566pt x 149.37906pt.
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -651,28 +930,23 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[1{C:/Users/Sheng Hsuan Peng/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
-
-
- <g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/cmp4GA/4GAs-eps-converted-to.pdf>] [2
-
- <g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/bGA/change_n_2pt-eps-converted-to.pdf>] ("g:/My Drive\2019\NTHU_107-2\Evolutionary_Computation\HW\HW1\Report\HW1-report.aux")
+[3 <g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/rGA/change_pc_uni-eps-converted-to.pdf> <g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/rGA/change_pm_uni-eps-converted-to.pdf> <g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/rGA/change_n_uni-eps-converted-to.pdf> <g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/rGA/change_pc_whole-eps-converted-to.pdf> <g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/rGA/change_pm_whole-eps-converted-to.pdf>] [4 <g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/rGA/change_pm_whole10000-eps-converted-to.pdf> <g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/rGA/change_n_whold-eps-converted-to.pdf> <g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/rGA/change_a_whole-eps-converted-to.pdf> <g:/My Drive/2019/NTHU_107-2/Evolutionary_Computation/HW/HW1/Report/fig/cmp4GA/4GAs-N100-eps-converted-to.pdf>] ("g:/My Drive\2019\NTHU_107-2\Evolutionary_Computation\HW\HW1\Report\HW1-report.aux")
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6044 strings out of 492945
- 83514 string characters out of 3135479
- 157939 words of memory out of 3000000
- 9753 multiletter control sequences out of 15000+200000
- 44776 words of font info for 108 fonts, out of 3000000 for 9000
+ 5730 strings out of 492945
+ 80150 string characters out of 3135479
+ 157787 words of memory out of 3000000
+ 9484 multiletter control sequences out of 15000+200000
+ 37327 words of font info for 82 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,12n,35p,762b,964s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/arphic/bsmiu/bsmiu30.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/arphic/bsmiu/bsmiu4e.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/arphic/bsmiu/bsmiu4f.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/arphic/bsmiu/bsmiu51.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/arphic/bsmiu/bsmiu52.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/arphic/bsmiu/bsmiu53.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/arphic/bsmiu/bsmiu54.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/arphic/bsmiu/bsmiu59.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/arphic/bsmiu/bsmiu5c.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/arphic/bsmiu/bsmiu5d.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/arphic/bsmiu/bsmiu5e.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/arphic/bsmiu/bsmiu62.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/arphic/bsmiu/bsmiu65.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/arphic/bsmiu/bsmiu66.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/arphic/bsmiu/bsmiu67.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/arphic/bsmiu/bsmiu6e.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/arphic/bsmiu/bsmiu7a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/arphic/bsmiu/bsmiu80.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/arphic/bsmiu/bsmiu82.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/arphic/bsmiu/bsmiu88.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/arphic/bsmiu/bsmiu8c.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/arphic/bsmiu/bsmiu8d.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/arphic/bsmiu/bsmiu90.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/arphic/bsmiu/bsmiu91.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/arphic/bsmiu/bsmiu97.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/arphic/bsmiu/bsmiu98.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "g:/My Drive\2019\NTHU_107-2\Evolutionary_Computation\HW\HW1\Report\HW1-report.pdf" (2 pages, 249375 bytes).
+ 41i,12n,35p,762b,875s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on "g:/My Drive\2019\NTHU_107-2\Evolutionary_Computation\HW\HW1\Report\HW1-report.pdf" (4 pages, 310722 bytes).
 PDF statistics:
- 208 PDF objects out of 1000 (max. 8388607)
+ 136 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 115 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
