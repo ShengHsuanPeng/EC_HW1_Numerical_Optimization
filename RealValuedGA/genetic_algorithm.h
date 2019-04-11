@@ -12,22 +12,10 @@
 namespace genetic_algorithm {
 
 typedef enum {
-    whole,
-    children,
-    best,
-    best_fitness,
-    summary
-} PrintMode;
-
-typedef enum {
     two_pt,
     uniform,
     whole_arithmetic
 } CrossoverMethod;
-
-//typedef std::chrono::high_resolution_clock::time_point TimeVar;
-
-//#define timeNow() std::chrono::high_resolution_clock::now()
 
 // GeneticAlgorithm
 class GeneticAlgorithm {
@@ -36,17 +24,16 @@ class GeneticAlgorithm {
         void UniformCrossover(double p_c, int n_tnmt);
         void WholeArithmeticCrossover(double p_c, int n_tnmt, double a);
         individual::Individual* TnmtSelection(int n_tnmt);
-        void Summary();
 
       protected:
         std::vector<individual::Individual*> population;
         int _population_size;
         int _gene_length;
-        double (*_fitnessFn)(double *, individual::ChromoTyp);
+        double (*_fitnessFn)(double *, int);
 
     public:
         double max_fitness;
-        GeneticAlgorithm(int, double (*fitnessFn)(double *, individual::ChromoTyp));
+        GeneticAlgorithm(int, double (*fitnessFn)(double *, int));
         ~GeneticAlgorithm();
         void Initial(int len);
         void Selection();
@@ -54,8 +41,6 @@ class GeneticAlgorithm {
         void Crossover(CrossoverMethod, double p_c, int n_tnmt, double a);
         void Mutation(double p_m);
         void Survivor();
-        void Print();
-        void Print(PrintMode);
 };
 
 } // namespace genetic_algorithm 

@@ -5,12 +5,12 @@
 
 namespace real_valued_ga {
 
-double Schwefel_Function(double *bits, individual::ChromoTyp size);
+double Schwefel_Function(double *bits, int n_of_x);
 
 class RealValuedGa: public genetic_algorithm::GeneticAlgorithm {
     public:
         RealValuedGa(int population_size, 
-                double (*fitnessFn)(double *, individual::ChromoTyp))
+                double (*fitnessFn)(double *, int))
         : GeneticAlgorithm(population_size, fitnessFn) {}
         void Initial(int n_of_x);
         

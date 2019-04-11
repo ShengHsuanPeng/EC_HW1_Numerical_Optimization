@@ -36,10 +36,10 @@ void GeneticAlgorithm::Crossover(CrossoverMethod method, double p_c, int n_tnmt)
 
 //population mutation
 void GeneticAlgorithm::Mutation(double p_m) {
+    double threshold = p_m * (double)RAND_MAX;
     for (int i=0; i<_population_size; i++) {
         for (int j=0;j<_gene_length;j++) {
-            double pm = (rand()/(double)RAND_MAX);
-            if (pm<p_m) {
+            if (rand() < threshold) {
                 *(population[i+_population_size]->bits+j)
                      = 1-*(population[i+_population_size]->bits+j);
             }
@@ -54,48 +54,6 @@ void GeneticAlgorithm::Survivor() {
     }
     sort(population.begin(), population.begin()+_population_size*2, utility::FitnessCmp);
     max_fitness = population[0]->fitness;
-}
-
-void GeneticAlgorithm::Print() {
-    std::cout << "Best: " << std::endl;
-    population[0]->print();
-}
-
-void GeneticAlgorithm::Print(PrintMode mode) {
-    switch (mode) {
-      case whole:
-        std::cout << "---------------------\nParent: " << std::endl;
-        for (int i = 0; i < _population_size; i++) {
-            std::cout << i << ": ";
-            population[i]->print(individual::oneline);
-        }
-        std::cout << "---------------------\nChild: " << std::endl;
-        for (int i = _population_size; i < _population_size*2; i++) {
-            std::cout << i << ": ";
-            population[i]->print(individual::oneline);
-        }
-        std::cout << "---------------------\n";
-        break;
-      case children:
-        std::cout << "---------------------\nChild: " << std::endl;
-        for (int i = _population_size; i < _population_size*2; i++) {
-            std::cout << i << ": ";
-            population[i]->print(individual::oneline);
-        }
-        std::cout << "---------------------\n";
-        break;
-      case best:
-        std::cout << "Best: " << std::endl;
-        population[0]->print();
-        break;
-      case best_fitness:
-        std::cout << "Best: ";
-        population[0]->print(individual::fitness);
-        break;
-      case summary:
-        Summary();
-    }
-    
 }
 
 individual::Individual* GeneticAlgorithm::TnmtSelection(int n_tnmt) {
@@ -120,6 +78,7 @@ individual::Individual* GeneticAlgorithm::TnmtSelection(int n_tnmt) {
 }
 
 void GeneticAlgorithm::TwoPtCrossover(double p_c, int n_tnmt) {
+    double threshold = p_c * (double)RAND_MAX;
     for (int i=0;i<_population_size/2;i++) {
         individual::Individual* parent1 = TnmtSelection(n_tnmt);
         individual::Individual* parent2 = TnmtSelection(n_tnmt);
@@ -128,8 +87,8 @@ void GeneticAlgorithm::TwoPtCrossover(double p_c, int n_tnmt) {
         }
         int point1 = rand() % (_gene_length);
         int point2 = rand() % (_gene_length);
-        double pc = (rand()/(double)RAND_MAX);
-        if (pc < p_c) {
+
+        if (rand() < threshold) {
             while (point1 == point2) {
                 point2 = rand()%(_gene_length);
             }
@@ -152,6 +111,7 @@ void GeneticAlgorithm::TwoPtCrossover(double p_c, int n_tnmt) {
     }
 }
 void GeneticAlgorithm::UniformCrossover(double p_c, int n_tnmt) {
+    double threshold = (double)RAND_MAX * p_c;
     for (int i=0; i<_population_size/2; i++) {
         individual::Individual* parent1 = TnmtSelection(n_tnmt);
         individual::Individual* parent2 = TnmtSelection(n_tnmt);
@@ -160,8 +120,7 @@ void GeneticAlgorithm::UniformCrossover(double p_c, int n_tnmt) {
         }
         
         for (int j=0; j<_gene_length; j++) {
-            double pc = (rand()/(double)RAND_MAX);
-            if (pc < p_c) {
+            if (rand() < threshold) {
                 *(population[i*2+_population_size]->bits+j) = *(parent1->bits+j);
                 *(population[i*2+1+_population_size]->bits+j) = *(parent2->bits+j);
             } else  {
@@ -170,25 +129,6 @@ void GeneticAlgorithm::UniformCrossover(double p_c, int n_tnmt) {
             }
         }
     }
-}
-
-
-void GeneticAlgorithm::Summary() {
-    double sum = 0;
-    double mean = 0;
-    double var = 0;
-    for (int i = 0; i < _population_size * 2; i++) {
-        sum += population[i]->fitness;
-    }
-    mean = sum / double(_population_size);
-    for (int i = 0; i < _population_size * 2; i++) {
-        var += pow((population[i]->fitness - mean), 2);
-    }
-    var /= double(_population_size);
-    std::cout << std::setw(7) << std::fixed << std::setprecision(2) 
-              << "Best:  " << population[0]->fitness << std::endl
-              << "Mean: " << mean << std::endl
-              << "var:  " << var << std::endl;
 }
 
 GeneticAlgorithm::~GeneticAlgorithm() {

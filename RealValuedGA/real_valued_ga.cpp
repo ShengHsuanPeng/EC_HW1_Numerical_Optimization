@@ -2,9 +2,7 @@
 
 namespace real_valued_ga {
 
-double Schwefel_Function(double* bits, individual::ChromoTyp size) {
-    int n_of_x = size.n_of_x;
-    
+double Schwefel_Function(double* bits, int n_of_x) {
     double fsch=418.98291*n_of_x;
     for (int j=0; j<n_of_x; j++) {
         fsch -= (*(bits + j))*sin(sqrt(fabs(*(bits + j))));

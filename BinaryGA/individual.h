@@ -6,15 +6,7 @@
 
 namespace individual {
 
-typedef enum {
-    silent,
-    fitness,
-    whole,
-    oneline
-} PrintMode;
-
 struct ChromoTyp {
-    int gene_length;
     int n_of_x;
     int x_len;
 };
@@ -30,8 +22,6 @@ class Individual {
         ChromoTyp gene_size;
         Individual() : bits(NULL), fitness(0.0f){};
         Individual(int n_of_x, int x_len, double (*fitness_fn)(int *, ChromoTyp), bool child);
-        void print();
-        void print(PrintMode);
         void CalcFitness();
 };
 } // namespace individual
